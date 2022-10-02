@@ -1,0 +1,54 @@
+<!DOCTYPE HTML>
+
+<html>
+	{% include 'header/app.html' %}
+	<body class="is-preload homepage">
+		<div id="page-wrapper">
+
+			<!-- Header -->
+				{% include 'nav/header.html' %}
+				<form action="/articles/add" method="post" class="container" enctype="multipart/form-data">
+					<input class="form-controls" type="text" name="title" placeholder="titre de l'article">
+					<textarea name="content" placeholder="contenu de l'article" cols="30" rows="5"></textarea>
+					<input type="file" name="image" id="">
+					<input type="submit" class="btn btn-primary">
+				</form>
+			<!-- Banner -->
+				{% include 'nav/banner.html' %}
+
+			
+
+		{% include 'main.html' %}
+			<!-- Footer -->
+				<div id="footer-wrapper">
+					<footer id="footer" class="container">
+						<div class="row">
+							
+						
+		
+						</div>
+						<div class="row">
+							<div class="col-12">
+								<div id="copyright">
+									<ul class="menu">
+										
+									</ul>
+								</div>
+							</div>
+						</div>
+					</footer>
+				</div>
+
+			</div>
+
+		<!-- Scripts -->
+
+			<script src="{{url_for('static', filename='assets/js/jquery.min.js')}}"></script>
+			<script src="{{url_for('static', filename='assets/js/jquery.dropotron.min.js')}}"></script>
+			<script src="{{url_for('static', filename='assets/js/browser.min.js')}}"></script>
+			<script src="{{url_for('static', filename='assets/js/breakpoints.min.js')}}"></script>
+			<script src="{{url_for('static', filename='assets/js/util.js')}}"></script>
+			<script src="{{url_for('static', filename='assets/js/main.js')}}"></script>
+
+	</body>
+</html>
